@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="반려동물 등록"
+            app:contentInsetStart="0dp"
+            app:titleMarginStart="0dp"
+            app:logo="@drawable/ic_launcher"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <!-- 선택한 반려동물 이름 (수정 불가) -->
+        <TextView
+            android:id="@+id/tvSelectedPet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선택한 반려동물"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:enabled="false"
+            android:background="#EEEEEE"
+            android:padding="8dp"/>
+
+        <!-- 자동 급식 옵션 (수정 불가) -->
+        <TextView
+            android:id="@+id/tvAutoFeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="자동 급식 옵션"
+            android:textSize="16sp"
+            android:paddingTop="8dp"
+            android:enabled="false"
+            android:background="#EEEEEE"
+            android:padding="8dp"/>
+
+        <!-- 반려동물 이름 입력 -->
+        <EditText
+            android:id="@+id/etPetName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="반려동물 이름 입력"
+            android:inputType="textPersonName"
+            android:paddingTop="16dp"/>
+
+        <!-- 나이 입력 -->
+        <EditText
+            android:id="@+id/etPetAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="나이 입력"
+            android:inputType="number"
+            android:paddingTop="8dp"/>
+
+        <!-- 몸무게 입력 -->
+        <EditText
+            android:id="@+id/etPetWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="몸무게 입력"
+            android:inputType="numberDecimal"
+            android:paddingTop="8dp"/>
+
+        <!-- 반려동물 사진 표시 -->
+        <ImageView
+            android:id="@+id/imgPetPhoto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher"
+            android:scaleType="centerCrop"
+            android:paddingTop="16dp"
+            android:background="#CCCCCC"/>
+
+        <!-- 사진 선택 버튼 -->
+        <Button
+            android:id="@+id/btnSelectPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사진 선택"
+            android:paddingTop="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- 등록 완료 버튼 -->
+        <Button
+            android:id="@+id/btnRegisterPet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="등록 완료"
+            android:paddingTop="8dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="뒤로가기"
+            android:paddingTop="8dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
